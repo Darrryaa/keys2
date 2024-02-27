@@ -83,3 +83,7 @@ elif answer == 'n':
 
 else:
     print('вы ввели неверный знак')
+
+
+main()
+
