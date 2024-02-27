@@ -1,80 +1,85 @@
-'''
+"""
 
-     Part of case-study #2: Task elasticity
-
-
-    Многие жители Камеруна до сих пор используют крышечки, чтобы приобрести товар или расплатиться за услуги.
-    Здесь их приравнивают к мелочи. Ценность крышечкам придают постоянные акции производителей пива.
-    Цена на папайю выросла с 95 до 148 крышечек. Доходы деревенских жителей снизились на 17%.
-    В результате величина спроса на фрукт снизилась,и если раньше потребители были готовы покупать 500 кг папайи,
-     то теперь покупают 380 кг. В то же время величина предложения на папайю увеличилась на 7%.
-    Эластичными или неэластичными оказались спрос по цене, спрос по доходу, предложение по цене?
+  Part of case-study #2: Task elasticity
 
 
-     Developers: Denisova D., Batrakova K., Simonov A.
+  Задача:
+  В местном супермаркете цены на мандарины выросли на 15%,
+  в результате недельный обьем продаж апельсинов в этом супермаркете вырос с 2-х тонн до 2,6 тонн.
+  Эластичным или неэластичным оказался спрос на апельсины по цене мандаринов?
+  Какими товарами по отношению друг к другу являются эти товары?
 
-'''
+
+  Developers: -----
+
+"""
+
+import art_local as art
 
 
 def main():
+    '''
+    Main function.
+    :return: None
+    '''
 
 
-    P1 = int(input('Введите изначальную цену: '))
-    P2 = int(input('Введите измененную цену: '))
-    Q1 = int(input('Введите изначальное количество: '))
-    Q2 = int(input('Введите измененное количество: '))
-    I = int(input('Введите изменение дохода (в процентах): '))
-    S= int(input("Изменение предложения (в процентах):"))
+print('Знаете ли вы цены на мандарины? (y - да, n - нет(цены в процентах))')
+answer = input()
+if answer == 'y':
+    price_1 = float(input(art.count_price_1))
+    price_2 = float(input(art.count_price_2))
+    demand_1 = float(input(art.count_demand_1))
+    demand_2 = float(input(art.count_demand_2))
+
+    elasticity_1 = ((demand_2 - demand_1) / (demand_2 + demand_1)) * ((price_1 + price_2) / (price_2 - price_1))
+    print(elasticity_1)
+
+    if elasticity_1 > 0:
+        print('товары - Субституты (взаимозаменяющие)')
+    elif elasticity_1 < 0:
+        print('товары -Комплименты (взаимодополняющие)')
+    elif elasticity_1 == 1:
+        print('товары - не зависящие друг от друга')
 
 
+elif answer == 'n':
+    print('увеличилась или уменьшилась цена(u - увеличилась, d - упала)')
+    answer_2 = input()
+    if answer_2 == 'u':
+        changes_1 = float(input(art.count_changes_1))
+        demand_1 = float(input(art.count_demand_1))
+        demand_2 = float(input(art.count_demand_2))
 
-    if P1/P2 < 1:
-        price = int((1-(P1/P2))*100)
-        print(f'Цена выросла на: {price} %')
-    elif P2/P1<1:
-        price = int(((P2/P1) - 1)*100)
-        print(f'Цена снизилась на: {price} %')
+        elasticity_1 = ((demand_2 - demand_1) / (demand_2 + demand_1)) * (
+                (100 + (100 + changes_1)) / ((100 + changes_1) - 100))
+        print(elasticity_1)
 
+        if elasticity_1 > 0:
+            print('товары - Субституты (взаимозаменяющие)')
+        elif elasticity_1 < 0:
+            print('товары -Комплименты (взаимодополняющие)')
+        elif elasticity_1 == 1:
+            print('товары - не зависящие друг от друга')
 
+    elif answer_2 == 'd':
+        changes_1 = float(input(art.count_changes_1))
+        demand_1 = float(input(art.count_demand_1))
+        demand_2 = float(input(art.count_demand_2))
 
-    if Q1/Q2 < 1:
-        quantity = int((1 - (Q1 / Q2)) * 100)
-        print(f'Количество выросло на: {quantity} %')
-    elif Q2/Q1 < 1:
-        quantity = int(((Q2 / Q1) - 1) * 100)
-        print(f'Количество снизилось на: {quantity} %')
+        elasticity_1 = ((demand_2 - demand_1) / (demand_2 + demand_1)) * (
+                (100 + (100 - changes_1)) / ((100 - changes_1) - 100))
+        print(elasticity_1)
 
+        if elasticity_1 > 0:
+            print('товары - Субституты (взаимозаменяющие)')
+        elif elasticity_1 < 0:
+            print('товары -Комплименты (взаимодополняющие)')
+        elif elasticity_1 == 1:
+            print('товары - не зависящие друг от друга')
 
-
-    EdP = abs(quantity / price)
-
-
-    EdI = abs(quantity / I)
-
-
-    Es = (S) / (P1 - P2) * (P1 / S)
-
-
-
-    if EdP > 1:
-        print(f'Эластичность спроса по цене равна: {EdP:.2f}, спрос эластичен.')
-    elif 0 < EdP < 1:
-        print(f'Эластичность спроса по цене равна: {EdP:.2f}, спрос эластичен.')
-
-
-    if EdI > 1:
-        print(f'Эластичность спроса по доходу: {EdI:.2f}, спрос эластичный,товар роскоши.')
-    if 0 < EdI < 1:
-        print(f'Эластичность спроса по доходу: {EdI:.2f}, спрос неэластичный,нормальный товар.')
-    if EdI == 0:
-        print(f'Эластичность спроса по доходу: {EdI:.2f}, спрос неэластичный,товар первой необходимости.')
-
-    if (Es > 1):
-        print("Предложение по цене эластично.")
     else:
-        print("Предложение по цене неэластично.")
+        print('вы ввели неверный знак')
 
-
-
-if __name__ == "__main__":
-    main()
+else:
+    print('вы ввели неверный знак')
