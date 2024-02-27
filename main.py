@@ -11,7 +11,7 @@
     Эластичными или неэластичными оказались спрос по цене, спрос по доходу, предложение по цене?
 
 
-     Developers: Denisova D., Batrakova K., Simonov A.
+     Developers: Denisova D., Batrakova K., Simonov A., Shatilov A.
 
 '''
 
