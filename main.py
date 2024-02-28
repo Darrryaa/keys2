@@ -58,7 +58,7 @@ def main():
     elastisitydI = abs(quantity / income)
 
 
-    elastisityP = (s) / (starting_price - final_price) * (starting_price / s)
+    elastisityP = (supply) / (starting_price - final_price) * (starting_price / supply)
 
 
 
