@@ -27,18 +27,18 @@ def main():
 
 
     starting_price = int(input(art.count_price_1))
-    p2 = int(input(art.count_price_1))
+    final_price = int(input(art.count_price_1))
     q1 = int(input(art.count_demand_1))
     q2 = int(input(art.count_demand_2))
     i = int(input(art.count_income))
     s= int(input(art.count_demand))
 
 
-    if starting_price/p2 < 1:
-        price = int((1-(starting_price/p2))*100)
+    if starting_price/final_price < 1:
+        price = int((1-(starting_price/final_price))*100)
         print(f'Цена выросла на: {price} %')
-    elif p2/starting_price<1:
-        price = int(((p2/starting_price) - 1)*100)
+    elif final_price/starting_price<1:
+        price = int(((final_price/starting_price) - 1)*100)
         print(f'Цена снизилась на: {price} %')
 
 
