@@ -43,7 +43,7 @@ def main():
 
 
 
-    if initial_quantity/final quantity < 1:
+    if initial_quantity/final_quantity < 1:
         quantity = int((1 - (initial_quantity / final quantity)) * 100)
         print(f'Количество выросло на: {quantity} %')
     elif final quantity/initial_quantity < 1:
