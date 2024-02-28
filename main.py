@@ -26,12 +26,12 @@ def main():
     
 
 
-    P1 = int(input(ru.count_price_1))
-    P2 = int(input(ru.count_price_1))
-    Q1 = int(input(ru.count_demand_1))
-    Q2 = int(input(ru.count_demand_2))
-    I = int(input(ru.count_income))
-    S= int(input(ru.count_demand))
+    P1 = int(input(art.count_price_1))
+    P2 = int(input(art.count_price_1))
+    Q1 = int(input(art.count_demand_1))
+    Q2 = int(input(art.count_demand_2))
+    I = int(input(art.count_income))
+    S= int(input(art.count_demand))
 
 
     if P1/P2 < 1:
