@@ -58,28 +58,28 @@ def main():
     elastisitydI = abs(quantity / I)
 
 
-    Es = (S) / (P1 - P2) * (P1 / S)
+    elastisityP = (S) / (P1 - P2) * (P1 / S)
 
 
 
     if elasticitydP > 1:
-        print(f'{elasticitydP:.2f}, спрос эластичен.')
+        print(f'{elasticitydP}, спрос эластичен.')
     elif 0 < elasticitydP < 1:
-        print(f'{elasticitydP:.2f}, спрос неэластичен.')
+        print(f'{elasticitydP}, спрос неэластичен.')
 
 
-    if EdI > 1:
-        print(f'{elastisitydI:.2f}, спрос эластичный,товар роскоши.')
-    if 0 < EdI < 1:
-        print(f'{elastisitydI:.2f}, спрос неэластичный,нормальный товар.')
-    if EdI == 0:
-        print(f'{elastisitydI:.2f}, спрос неэластичный,товар первой необходимости.')
+    if elastisitydI > 1:
+        print(f'{elastisitydI}, спрос эластичный,товар роскоши.')
+    if 0 < elastisitydI < 1:
+        print(f'{elastisitydI}, спрос неэластичный,нормальный товар.')
+    if elastisitydI == 0:
+        print(f'{elastisitydI}, спрос неэластичный,товар первой необходимости.')
 
-    if (Es > 1):
-        print("Предложение по цене эластично.")
+    if (elastisityP > 1):
+        print(f'{elastisityP}, предложение по цене эластично.')
     else:
-        print("Предложение по цене неэластично.")
-
+        print(f'{elastisityP}, предложение по цене неэластично.')
+ 
 
 
 if __name__ == "__main__":
