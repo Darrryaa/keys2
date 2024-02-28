@@ -26,28 +26,28 @@ def main():
     
 
 
-    P1 = int(input(art.count_price_1))
-    P2 = int(input(art.count_price_1))
-    Q1 = int(input(art.count_demand_1))
-    Q2 = int(input(art.count_demand_2))
-    I = int(input(art.count_income))
-    S= int(input(art.count_demand))
+    p1 = int(input(art.count_price_1))
+    p2 = int(input(art.count_price_1))
+    q1 = int(input(art.count_demand_1))
+    q2 = int(input(art.count_demand_2))
+    i = int(input(art.count_income))
+    s= int(input(art.count_demand))
 
 
-    if P1/P2 < 1:
-        price = int((1-(P1/P2))*100)
+    if p1/p2 < 1:
+        price = int((1-(p1/p2))*100)
         print(f'Цена выросла на: {price} %')
-    elif P2/P1<1:
-        price = int(((P2/P1) - 1)*100)
+    elif p2/p1<1:
+        price = int(((p2/p1) - 1)*100)
         print(f'Цена снизилась на: {price} %')
 
 
 
-    if Q1/Q2 < 1:
-        quantity = int((1 - (Q1 / Q2)) * 100)
+    if q1/q2 < 1:
+        quantity = int((1 - (q1 / q2)) * 100)
         print(f'Количество выросло на: {quantity} %')
-    elif Q2/Q1 < 1:
-        quantity = int(((Q2 / Q1) - 1) * 100)
+    elif q2/q1 < 1:
+        quantity = int(((q2 / q1) - 1) * 100)
         print(f'Количество снизилось на: {quantity} %')
 
 
@@ -55,10 +55,10 @@ def main():
     elasticitydP = abs(quantity / price)
 
 
-    elastisitydI = abs(quantity / I)
+    elastisitydI = abs(quantity / i)
 
 
-    elastisityP = (S) / (P1 - P2) * (P1 / S)
+    elastisityP = (s) / (p1 - p2) * (p1 / s)
 
 
 
