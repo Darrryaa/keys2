@@ -28,7 +28,7 @@ def main():
 
     starting_price = int(input(art.count_price_1))
     final_price = int(input(art.count_price_1))
-    q1 = int(input(art.count_demand_1))
+    initial_quantity = int(input(art.count_demand_1))
     q2 = int(input(art.count_demand_2))
     i = int(input(art.count_income))
     s= int(input(art.count_demand))
@@ -43,11 +43,11 @@ def main():
 
 
 
-    if q1/q2 < 1:
-        quantity = int((1 - (q1 / q2)) * 100)
+    if initial_quantity/q2 < 1:
+        quantity = int((1 - (initial_quantity / q2)) * 100)
         print(f'Количество выросло на: {quantity} %')
-    elif q2/q1 < 1:
-        quantity = int(((q2 / q1) - 1) * 100)
+    elif q2/initial_quantity < 1:
+        quantity = int(((q2 / initial_quantity) - 1) * 100)
         print(f'Количество снизилось на: {quantity} %')
 
 
