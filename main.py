@@ -52,7 +52,7 @@ def main():
 
 
 
-    EdP = abs(quantity / price)
+    elasticitydP = abs(quantity / price)
 
 
     EdI = abs(quantity / I)
@@ -62,10 +62,10 @@ def main():
 
 
 
-    if EdP > 1:
-        print(f'Эластичность спроса по цене равна: {EdP:.2f}, спрос эластичен.')
-    elif 0 < EdP < 1:
-        print(f'Эластичность спроса по цене равна: {EdP:.2f}, спрос эластичен.')
+    if elasticitydP > 1:
+        print(f'{elasticitydP:.2f}, спрос эластичен.')
+    elif 0 < elasticitydP < 1:
+        print(f'{elasticitydP:.2f}, спрос неэластичен.')
 
 
     if EdI > 1:
