@@ -14,7 +14,7 @@
      Developers: Denisova D., Batrakova K., Simonov A., Shatilov A.
 
 '''
-
+import art_local as art
 
 def main():
 
