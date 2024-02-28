@@ -18,14 +18,20 @@
 
 def main():
 
+ 
+    '''
+    Main function.
+    :return: None
+    '''
+    
 
-    P1 = int(input('Введите изначальную цену: '))
-    P2 = int(input('Введите измененную цену: '))
-    Q1 = int(input('Введите изначальное количество: '))
-    Q2 = int(input('Введите измененное количество: '))
-    I = int(input('Введите изменение дохода (в процентах): '))
-    S= int(input("Изменение предложения (в процентах):"))
 
+    P1 = int(input(ru.count_price_1))
+    P2 = int(input(ru.count_price_1))
+    Q1 = int(input(ru.count_demand_1))
+    Q2 = int(input(ru.count_demand_2))
+    I = int(input(ru.count_income))
+    S= int(input(ru.count_demand))
 
 
     if P1/P2 < 1:
