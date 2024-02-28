@@ -30,7 +30,7 @@ def main():
     final_price = int(input(art.count_price_1))
     initial_quantity = int(input(art.count_demand_1))
     final_quantity = int(input(art.count_demand_2))
-    i = int(input(art.count_income))
+    income = int(input(art.count_income))
     s= int(input(art.count_demand))
 
 
@@ -55,10 +55,10 @@ def main():
     elasticitydP = abs(quantity / price)
 
 
-    elastisitydI = abs(quantity / i)
+    elastisitydI = abs(quantity / income)
 
 
-    elastisityP = (s) / (starting_price - p2) * (starting_price / s)
+    elastisityP = (s) / (starting_price - final_price) * (starting_price / s)
 
 
 
