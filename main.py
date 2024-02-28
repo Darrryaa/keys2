@@ -31,7 +31,7 @@ def main():
     initial_quantity = int(input(art.count_demand_1))
     final_quantity = int(input(art.count_demand_2))
     income = int(input(art.count_income))
-    s= int(input(art.count_demand))
+    supply = int(input(art.count_demand))
 
 
     if starting_price/final_price < 1:
